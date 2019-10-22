@@ -1,11 +1,13 @@
+// © 2019 Ralf Ebert — CO2Rechner
+
 import UIKit
 
 class CO2RechnerViewController: UIViewController {
 
     // MARK: - Outlets
-    
-    @IBOutlet weak var kmTextField: UITextField!
-    @IBOutlet weak var resultLabel: UILabel!
+
+    @IBOutlet var kmTextField: UITextField!
+    @IBOutlet var resultLabel: UILabel!
 
     // MARK: - View Controller Lifecycle
 
@@ -16,9 +18,12 @@ class CO2RechnerViewController: UIViewController {
     // MARK: - Actions
 
     @IBAction func calculate() {
-        let km = Double(kmTextField.text!)!
-        let co2Kg = km * 0.1904
-        resultLabel.text = "CO₂-Emission: \(co2Kg)kg"
+        if let text = kmTextField.text, let km = Double(text), km > 0 {
+            let co2Kg = km * 0.1904
+            self.resultLabel.text = "CO₂-Emission: \(co2Kg)kg"
+        } else {
+            self.resultLabel.text = "-"
+        }
     }
-    
+
 }
