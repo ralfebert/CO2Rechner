@@ -18,7 +18,7 @@ class CO2RechnerViewController: UIViewController {
     @IBAction func calculate() {
         let km = Double(kmTextField.text!)!
         let co2Kg = km * 0.1904
-        resultLabel.text = "CO2-Emission: \(co2Kg)kg"
+        resultLabel.text = "CO₂-Emission: \(co2Kg)kg"
     }
     
 }

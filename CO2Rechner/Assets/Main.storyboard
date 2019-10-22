@@ -16,36 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-hv-lmU">
-                                <rect key="frame" x="190" y="88" width="129" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-hv-lmU">
+                                <rect key="frame" x="182.5" y="88.5" width="181.5" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CO2 Ausstoß" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pk-PU-Nm5">
-                                <rect key="frame" x="55" y="249" width="183.5" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gefahrene km:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-ZL-6oI">
+                                <rect key="frame" x="50" y="94" width="112.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gefahrene km:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-ZL-6oI">
-                                <rect key="frame" x="55" y="88" width="112.5" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-4C-OEr">
-                                <rect key="frame" x="55" y="151" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-4C-OEr">
+                                <rect key="frame" x="170" y="162.5" width="74" height="30"/>
                                 <state key="normal" title="Berechnen"/>
                                 <connections>
                                     <action selector="calculate" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZDM-89-6Vt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CO₂ Ausstoß" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pk-PU-Nm5">
+                                <rect key="frame" x="158" y="252.5" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Pk-PU-Nm5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BMx-IF-xRz"/>
+                            <constraint firstItem="Grp-ZL-6oI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="DDQ-C7-2qa"/>
+                            <constraint firstItem="Grp-ZL-6oI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="RWr-2g-udF"/>
+                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="leading" secondItem="Grp-ZL-6oI" secondAttribute="trailing" constant="20" id="Vau-99-9XC"/>
+                            <constraint firstItem="j9p-4C-OEr" firstAttribute="top" secondItem="9Uz-hv-lmU" secondAttribute="bottom" constant="40" id="WBf-YV-Pz2"/>
+                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="firstBaseline" secondItem="Grp-ZL-6oI" secondAttribute="firstBaseline" id="WhO-lW-Ldt"/>
+                            <constraint firstItem="0Pk-PU-Nm5" firstAttribute="top" secondItem="j9p-4C-OEr" secondAttribute="bottom" constant="60" id="jQq-jb-WxE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Uz-hv-lmU" secondAttribute="trailing" constant="50" id="kBh-VG-TJg"/>
+                            <constraint firstItem="j9p-4C-OEr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAZ-fR-3bV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
