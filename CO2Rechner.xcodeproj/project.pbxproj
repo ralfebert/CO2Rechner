@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1944F2F2FC79BC3BDCEEF7C0 /* CO2RechnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */; };
 		8A462147900B1CFBFF3535C5 /* CO2RechnerAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9015A2835C68AB94389E196 /* CO2RechnerAppDelegate.swift */; };
 		C2C2F958C6CD4E9175FB3A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE41D7DC8DADB65E7B2854E /* Assets.xcassets */; };
 		D8D50FF3790A61D33CBD22C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FB3AC96089ADB463FD8E67 /* LaunchScreen.storyboard */; };
@@ -16,6 +17,7 @@
 /* Begin PBXFileReference section */
 		10FE0C81552A836C09B9C353 /* CO2Rechner.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CO2Rechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BADE7AF11BAD5472E56275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2RechnerViewController.swift; sourceTree = "<group>"; };
 		CCD10BCBED5D3CF0292862DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCE41D7DC8DADB65E7B2854E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1BCA783D91D540AB743F2B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +28,7 @@
 		12F6BBD43F3102A07C9ADF42 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -46,13 +49,6 @@
 				CF1BCA783D91D540AB743F2B /* Main.storyboard */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		48CD9C3809B7DEB3C1FC5B77 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		4E4028A8FA9DDAB3492BF99C /* App */ = {
@@ -77,18 +73,9 @@
 			children = (
 				4E4028A8FA9DDAB3492BF99C /* App */,
 				410755C10438AC2D526A4723 /* Assets */,
-				C29CAE8786D43C16E2B279D6 /* Common */,
 				12F6BBD43F3102A07C9ADF42 /* Controller */,
-				48CD9C3809B7DEB3C1FC5B77 /* Model */,
 			);
 			path = CO2Rechner;
-			sourceTree = "<group>";
-		};
-		C29CAE8786D43C16E2B279D6 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +110,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = 1F2E5CCD3A37584A37CA819D;
@@ -153,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A462147900B1CFBFF3535C5 /* CO2RechnerAppDelegate.swift in Sources */,
+				1944F2F2FC79BC3BDCEEF7C0 /* CO2RechnerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +165,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CO2Rechner/App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CO2Rechner;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -190,7 +182,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CO2Rechner/App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.CO2Rechner;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
