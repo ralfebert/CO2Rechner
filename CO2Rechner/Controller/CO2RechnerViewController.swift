@@ -4,6 +4,14 @@ import UIKit
 
 class CO2RechnerViewController: UIViewController {
 
+    // MARK: - State
+
+    var rechner = CO2Rechner() {
+        didSet {
+            self.updateView()
+        }
+    }
+
     // MARK: - Outlets
 
     @IBOutlet var fahrzeugTypSegmentedControl: UISegmentedControl!
@@ -15,32 +23,46 @@ class CO2RechnerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.updateView()
+    }
+
+    func updateView() {
+        self.fahrzeugTypSegmentedControl.segmentTitles = Fahrzeugtyp.allCases.map { $0.rawValue }
+        self.fahrzeugTypSegmentedControl.selectedSegmentIndex = Fahrzeugtyp.allCases.firstIndex(of: self.rechner.fahrzeugTyp)!
+        self.kmTextField.text = self.numberFormatter.string(for: self.rechner.km)!
+        self.verbrauchTextField.text = self.numberFormatter.string(for: self.rechner.verbrauch)!
+        self.resultLabel.text = "CO₂-Emission: \(self.numberFormatter.string(for: self.rechner.co2Kg)!)kg"
     }
 
     // MARK: - Actions
 
-    @IBAction func calculate() {
+    @IBAction func fahrzeugTypChanged(_: Any) {
+        self.rechner.fahrzeugTyp = Fahrzeugtyp.allCases[self.fahrzeugTypSegmentedControl.selectedSegmentIndex]
+    }
 
+    @IBAction func verbrauchChanged() {
+        if let value = parseDecimalText(verbrauchTextField.text) {
+            self.rechner.verbrauch = value
+        }
+    }
+
+    @IBAction func kmChanged() {
+        if let value = parseDecimalText(kmTextField.text) {
+            self.rechner.km = value
+        }
+    }
+
+    // MARK: - Formatting
+
+    private var numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.generatesDecimalNumbers = true
         formatter.numberStyle = .decimal
-        
-        let multiplier: Decimal
-        switch self.fahrzeugTypSegmentedControl.selectedSegmentIndex {
-            case 0: // Benzin
-                multiplier = 23.8
-            case 1: // Diesel
-                multiplier = 26.5
-            default:
-                fatalError("Invalid fahrzeugTypSegmentedControl.selectedSegmentIndex")
-        }
+        return formatter
+    }()
 
-        if let km = formatter.number(from: kmTextField.text ?? "")?.decimalValue, let verbrauch = formatter.number(from: verbrauchTextField.text ?? "")?.decimalValue {
-            let co2Kg = km * (verbrauch * multiplier) / 1000
-            self.resultLabel.text = "CO₂-Emission: \(formatter.string(for: co2Kg)!)kg"
-        } else {
-            self.resultLabel.text = "-"
-        }
+    func parseDecimalText(_ value: String?) -> Decimal? {
+        self.numberFormatter.number(from: value ?? "")?.decimalValue
     }
 
 }

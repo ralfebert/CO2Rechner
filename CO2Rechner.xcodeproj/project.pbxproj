@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1944F2F2FC79BC3BDCEEF7C0 /* CO2RechnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */; };
 		8A462147900B1CFBFF3535C5 /* CO2RechnerAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9015A2835C68AB94389E196 /* CO2RechnerAppDelegate.swift */; };
+		BF0FA1BA2361F6060003660E /* CO2Rechner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FA1B92361F6060003660E /* CO2Rechner.swift */; };
+		BF0FA1BD2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FA1BC2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift */; };
 		C2C2F958C6CD4E9175FB3A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE41D7DC8DADB65E7B2854E /* Assets.xcassets */; };
 		D8D50FF3790A61D33CBD22C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FB3AC96089ADB463FD8E67 /* LaunchScreen.storyboard */; };
 		FDAB5A60FC3A015DF08B742E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1BCA783D91D540AB743F2B /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* Begin PBXFileReference section */
 		10FE0C81552A836C09B9C353 /* CO2Rechner.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CO2Rechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BADE7AF11BAD5472E56275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0FA1B92361F6060003660E /* CO2Rechner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CO2Rechner.swift; sourceTree = "<group>"; };
+		BF0FA1BC2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+SegmentTitles.swift"; sourceTree = "<group>"; };
 		C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2RechnerViewController.swift; sourceTree = "<group>"; };
 		CCD10BCBED5D3CF0292862DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCE41D7DC8DADB65E7B2854E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,9 +77,27 @@
 			children = (
 				4E4028A8FA9DDAB3492BF99C /* App */,
 				410755C10438AC2D526A4723 /* Assets */,
+				BF0FA1BB2361F6880003660E /* Common */,
 				12F6BBD43F3102A07C9ADF42 /* Controller */,
+				BF0FA1B82361F5F80003660E /* Model */,
 			);
 			path = CO2Rechner;
+			sourceTree = "<group>";
+		};
+		BF0FA1B82361F5F80003660E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF0FA1B92361F6060003660E /* CO2Rechner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF0FA1BB2361F6880003660E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BF0FA1BC2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A462147900B1CFBFF3535C5 /* CO2RechnerAppDelegate.swift in Sources */,
+				BF0FA1BA2361F6060003660E /* CO2Rechner.swift in Sources */,
 				1944F2F2FC79BC3BDCEEF7C0 /* CO2RechnerViewController.swift in Sources */,
+				BF0FA1BD2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
