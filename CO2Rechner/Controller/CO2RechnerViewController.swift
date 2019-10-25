@@ -27,7 +27,7 @@ class CO2RechnerViewController: UIViewController {
     }
 
     func updateView() {
-        self.fahrzeugTypSegmentedControl.segmentTitles = Fahrzeugtyp.allCases.map { $0.rawValue }
+        self.fahrzeugTypSegmentedControl.segmentTitles = Fahrzeugtyp.allCases.map { $0.description }
         self.fahrzeugTypSegmentedControl.selectedSegmentIndex = Fahrzeugtyp.allCases.firstIndex(of: self.rechner.fahrzeugTyp)!
         self.kmTextField.text = self.numberFormatter.string(for: self.rechner.km)!
         self.verbrauchTextField.text = self.numberFormatter.string(for: self.rechner.verbrauch)!
