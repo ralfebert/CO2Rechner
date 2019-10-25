@@ -7,40 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1944F2F2FC79BC3BDCEEF7C0 /* CO2RechnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */; };
 		8A462147900B1CFBFF3535C5 /* CO2RechnerAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9015A2835C68AB94389E196 /* CO2RechnerAppDelegate.swift */; };
-		BF0FA1BA2361F6060003660E /* CO2Rechner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FA1B92361F6060003660E /* CO2Rechner.swift */; };
-		BF0FA1BD2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FA1BC2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift */; };
+		BF0FA1D62362ED890003660E /* CO2RechnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0FA1D52362ED890003660E /* CO2RechnerUITests.swift */; };
 		C2C2F958C6CD4E9175FB3A2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE41D7DC8DADB65E7B2854E /* Assets.xcassets */; };
 		D8D50FF3790A61D33CBD22C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73FB3AC96089ADB463FD8E67 /* LaunchScreen.storyboard */; };
 		FDAB5A60FC3A015DF08B742E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1BCA783D91D540AB743F2B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BF0FA1D82362ED890003660E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB5E57E51620958DCACD96D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3EAFF0ACECECBB55580408E;
+			remoteInfo = CO2Rechner;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		10FE0C81552A836C09B9C353 /* CO2Rechner.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CO2Rechner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BADE7AF11BAD5472E56275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF0FA1B92361F6060003660E /* CO2Rechner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CO2Rechner.swift; sourceTree = "<group>"; };
-		BF0FA1BC2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+SegmentTitles.swift"; sourceTree = "<group>"; };
-		C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2RechnerViewController.swift; sourceTree = "<group>"; };
+		BF0FA1D32362ED890003660E /* CO2RechnerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CO2RechnerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0FA1D52362ED890003660E /* CO2RechnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2RechnerUITests.swift; sourceTree = "<group>"; };
+		BF0FA1D72362ED890003660E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCD10BCBED5D3CF0292862DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCE41D7DC8DADB65E7B2854E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1BCA783D91D540AB743F2B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F9015A2835C68AB94389E196 /* CO2RechnerAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CO2RechnerAppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXGroup section */
-		12F6BBD43F3102A07C9ADF42 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C784D82AB1132E24313623EB /* CO2RechnerViewController.swift */,
+/* Begin PBXFrameworksBuildPhase section */
+		BF0FA1D02362ED890003660E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
-			path = Controller;
-			sourceTree = "<group>";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
 		1F2E5CCD3A37584A37CA819D = {
 			isa = PBXGroup;
 			children = (
 				6DE7C4569B74ED82237EF61F /* CO2Rechner */,
+				BF0FA1D42362ED890003660E /* CO2RechnerUITests */,
 				501A70F53B6908EC89CB0E27 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				10FE0C81552A836C09B9C353 /* CO2Rechner.app */,
+				BF0FA1D32362ED890003660E /* CO2RechnerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,27 +89,17 @@
 			children = (
 				4E4028A8FA9DDAB3492BF99C /* App */,
 				410755C10438AC2D526A4723 /* Assets */,
-				BF0FA1BB2361F6880003660E /* Common */,
-				12F6BBD43F3102A07C9ADF42 /* Controller */,
-				BF0FA1B82361F5F80003660E /* Model */,
 			);
 			path = CO2Rechner;
 			sourceTree = "<group>";
 		};
-		BF0FA1B82361F5F80003660E /* Model */ = {
+		BF0FA1D42362ED890003660E /* CO2RechnerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				BF0FA1B92361F6060003660E /* CO2Rechner.swift */,
+				BF0FA1D52362ED890003660E /* CO2RechnerUITests.swift */,
+				BF0FA1D72362ED890003660E /* Info.plist */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		BF0FA1BB2361F6880003660E /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				BF0FA1BC2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift */,
-			);
-			path = Common;
+			path = CO2RechnerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,13 +121,38 @@
 			productReference = 10FE0C81552A836C09B9C353 /* CO2Rechner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BF0FA1D22362ED890003660E /* CO2RechnerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF0FA1DA2362ED890003660E /* Build configuration list for PBXNativeTarget "CO2RechnerUITests" */;
+			buildPhases = (
+				BF0FA1CF2362ED890003660E /* Sources */,
+				BF0FA1D02362ED890003660E /* Frameworks */,
+				BF0FA1D12362ED890003660E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF0FA1D92362ED890003660E /* PBXTargetDependency */,
+			);
+			name = CO2RechnerUITests;
+			productName = CO2RechnerUITests;
+			productReference = BF0FA1D32362ED890003660E /* CO2RechnerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BAB5E57E51620958DCACD96D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					BF0FA1D22362ED890003660E = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = B3EAFF0ACECECBB55580408E;
+					};
+				};
 			};
 			buildConfigurationList = 024E2F846EA231A4EB9F13C9 /* Build configuration list for PBXProject "CO2Rechner" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -140,6 +167,7 @@
 			projectRoot = "";
 			targets = (
 				B3EAFF0ACECECBB55580408E /* CO2Rechner */,
+				BF0FA1D22362ED890003660E /* CO2RechnerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -155,21 +183,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BF0FA1D12362ED890003660E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF0FA1CF2362ED890003660E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0FA1D62362ED890003660E /* CO2RechnerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC0887EC06423A69A637F5EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8A462147900B1CFBFF3535C5 /* CO2RechnerAppDelegate.swift in Sources */,
-				BF0FA1BA2361F6060003660E /* CO2Rechner.swift in Sources */,
-				1944F2F2FC79BC3BDCEEF7C0 /* CO2RechnerViewController.swift in Sources */,
-				BF0FA1BD2361F69F0003660E /* UISegmentedControl+SegmentTitles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF0FA1D92362ED890003660E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3EAFF0ACECECBB55580408E /* CO2Rechner */;
+			targetProxy = BF0FA1D82362ED890003660E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		73FB3AC96089ADB463FD8E67 /* LaunchScreen.storyboard */ = {
@@ -214,6 +262,55 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF0FA1DB2362ED890003660E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CO2RechnerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CO2RechnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CO2Rechner;
+			};
+			name = Debug;
+		};
+		BF0FA1DC2362ED890003660E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CO2RechnerUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CO2RechnerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CO2Rechner;
 			};
 			name = Release;
 		};
@@ -337,6 +434,15 @@
 			buildConfigurations = (
 				E0ECC92FC779F763E94CC80F /* Debug */,
 				E9248842F19C5B08DA626B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BF0FA1DA2362ED890003660E /* Build configuration list for PBXNativeTarget "CO2RechnerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0FA1DB2362ED890003660E /* Debug */,
+				BF0FA1DC2362ED890003660E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

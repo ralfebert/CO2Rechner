@@ -8,113 +8,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rechner View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CO2RechnerViewController" customModule="CO2Rechner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-hv-lmU">
-                                <rect key="frame" x="134" y="175.5" width="186" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="kmChanged" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7hR-nu-l4k"/>
-                                    <action selector="kmChanged" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Jb9-X5-5Cq"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strecke:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-ZL-6oI">
-                                <rect key="frame" x="25" y="181" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CO₂ Ausstoß" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pk-PU-Nm5">
-                                <rect key="frame" x="158" y="339.5" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-V8-zym">
-                                <rect key="frame" x="134" y="133" width="186" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="verbrauchChanged" destination="BYZ-38-t0r" eventType="editingDidEnd" id="FDI-ib-cnb"/>
-                                    <action selector="verbrauchChanged" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="i27-IU-DWj"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verbrauch:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0se-7M-Eci">
-                                <rect key="frame" x="25" y="138.5" width="84" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="l/100km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGU-Lb-GGC">
-                                <rect key="frame" x="328" y="138.5" width="61" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjM-y6-yrL">
-                                <rect key="frame" x="328" y="181" width="23.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dy3-7g-Vy5">
-                                <rect key="frame" x="134" y="94" width="121" height="32"/>
-                                <segments>
-                                    <segment title="Benzin"/>
-                                    <segment title="Diesel"/>
-                                </segments>
-                                <connections>
-                                    <action selector="fahrzeugTypChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="UlK-Rc-F7W"/>
-                                </connections>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahrzeugtyp:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gse-po-6Il">
-                                <rect key="frame" x="25" y="98.5" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vpa-2a-YwA">
+                                <rect key="frame" x="10" y="54" width="394" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Urq-Oh-ljT">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" label="Field1"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xf1-aJ-a6z">
+                                        <rect key="frame" x="0.0" y="42" width="394" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" label="Field2"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="leading" secondItem="cwb-V8-zym" secondAttribute="leading" id="19C-lg-s7J"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xGU-Lb-GGC" secondAttribute="trailing" constant="25" id="4ya-Q0-BSy"/>
-                            <constraint firstItem="cwb-V8-zym" firstAttribute="leading" secondItem="dy3-7g-Vy5" secondAttribute="leading" id="5jy-vl-Snh"/>
-                            <constraint firstItem="cwb-V8-zym" firstAttribute="top" secondItem="dy3-7g-Vy5" secondAttribute="bottom" constant="8" id="5kt-nt-H8O"/>
-                            <constraint firstItem="rjM-y6-yrL" firstAttribute="firstBaseline" secondItem="9Uz-hv-lmU" secondAttribute="firstBaseline" id="9JI-De-CAz"/>
-                            <constraint firstItem="xGU-Lb-GGC" firstAttribute="leading" secondItem="cwb-V8-zym" secondAttribute="trailing" constant="8" id="9rY-JS-YF3"/>
-                            <constraint firstItem="0Pk-PU-Nm5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BMx-IF-xRz"/>
-                            <constraint firstItem="xGU-Lb-GGC" firstAttribute="firstBaseline" secondItem="cwb-V8-zym" secondAttribute="firstBaseline" id="DvM-IE-X29"/>
-                            <constraint firstItem="cwb-V8-zym" firstAttribute="firstBaseline" secondItem="0se-7M-Eci" secondAttribute="firstBaseline" id="Fak-Sy-nYd"/>
-                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="top" secondItem="cwb-V8-zym" secondAttribute="bottom" constant="8.5" id="RJx-RL-bh4"/>
-                            <constraint firstItem="Grp-ZL-6oI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="RWr-2g-udF"/>
-                            <constraint firstItem="cwb-V8-zym" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0se-7M-Eci" secondAttribute="trailing" constant="15" id="Rm8-Gk-0iz"/>
-                            <constraint firstItem="Grp-ZL-6oI" firstAttribute="leading" secondItem="0se-7M-Eci" secondAttribute="leading" id="T4d-v0-oSs"/>
-                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="leading" secondItem="Grp-ZL-6oI" secondAttribute="trailing" constant="20" id="Vau-99-9XC"/>
-                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="firstBaseline" secondItem="Grp-ZL-6oI" secondAttribute="firstBaseline" id="WhO-lW-Ldt"/>
-                            <constraint firstItem="9Uz-hv-lmU" firstAttribute="trailing" secondItem="cwb-V8-zym" secondAttribute="trailing" id="cqe-Ro-EQr"/>
-                            <constraint firstItem="dy3-7g-Vy5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gse-po-6Il" secondAttribute="trailing" constant="8" id="dlU-d1-N9z"/>
-                            <constraint firstItem="0se-7M-Eci" firstAttribute="leading" secondItem="gse-po-6Il" secondAttribute="leading" id="gex-su-R7G"/>
-                            <constraint firstItem="rjM-y6-yrL" firstAttribute="leading" secondItem="9Uz-hv-lmU" secondAttribute="trailing" constant="8" id="jmU-L9-Cz0"/>
-                            <constraint firstItem="dy3-7g-Vy5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mKp-yp-oCk"/>
-                            <constraint firstItem="dy3-7g-Vy5" firstAttribute="firstBaseline" secondItem="gse-po-6Il" secondAttribute="firstBaseline" id="mf9-mp-9kq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rjM-y6-yrL" secondAttribute="trailing" constant="25" id="sso-xO-n27"/>
-                            <constraint firstItem="0Pk-PU-Nm5" firstAttribute="top" secondItem="9Uz-hv-lmU" secondAttribute="bottom" constant="130" id="zgR-aO-yee"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vpa-2a-YwA" secondAttribute="trailing" constant="10" id="0FG-Zv-7ub"/>
+                            <constraint firstItem="Vpa-2a-YwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="X1c-dP-P7h"/>
+                            <constraint firstItem="Vpa-2a-YwA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="xd3-Ef-4rK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="fahrzeugTypSegmentedControl" destination="dy3-7g-Vy5" id="Atg-3O-tWL"/>
-                        <outlet property="kmTextField" destination="9Uz-hv-lmU" id="l76-5Y-cUi"/>
-                        <outlet property="resultLabel" destination="0Pk-PU-Nm5" id="oHp-NK-elV"/>
-                        <outlet property="verbrauchTextField" destination="cwb-V8-zym" id="bVr-2j-rgo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
