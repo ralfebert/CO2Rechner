@@ -19,7 +19,6 @@ struct CO2RechnerView: View {
                         Text(typ.description)
                             .tag(typ)
                     }
-
                 }.pickerStyle(SegmentedPickerStyle())
             }
             .padding(.top, 20)

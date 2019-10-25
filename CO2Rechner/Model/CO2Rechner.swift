@@ -9,12 +9,11 @@ enum Fahrzeugtyp: String, CaseIterable, CustomStringConvertible {
     case diesel
 
     var multiplier: Decimal {
-        switch self {
-            case .benzin:
-                return 23.8
-            case .diesel:
-                return 26.5
-        }
+        let mapping : [Fahrzeugtyp:Decimal] = [
+            .benzin: 23.8,
+            .diesel: 26.5
+        ]
+        return mapping[self]!
     }
 
     var description: String {
